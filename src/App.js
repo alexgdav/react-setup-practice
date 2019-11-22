@@ -1,23 +1,45 @@
-import React from 'react'
-import { Route, Link } from 'react-router-dom'
+import React, { Component } from 'react'
+import './style.scss'
+import Form from './Form.js'
+import WeatherResult from './WeatherResult.js'
 
-const Dashboard = () => (
-  <div>
-    <h3>Dashboard</h3>
-    <p>This is separate route.</p>
-  </div>
-)
+class App extends Component {
+  constructor () {
+    super()
+    this.state = {
+      cityname: '',
+      countrycode: ''
+    }
+  }
 
-const App = () => (
-  <div>
-    <nav>
-      <Link to="/dashboard">Dashboard</Link>
-    </nav>
-    <h1>Welcome to React!</h1>
-    <div>
-      <Route path="/dashboard" component={Dashboard}/>
-    </div>
-  </div>
-)
+ handleChange = event => {
+   const getWeather = event.target.value
+   this.setState({ [getWeather]: event.target.value })
+   console.log(getWeather)
+ }
 
+ handleSubmit = event => {
+   event.preventDefault()
+ }
+
+ render () {
+   return (
+     <div className="container-fluid">
+       <div className='main'>
+         <aside className="aside">
+         </aside>
+         <div className="splitpane-right row">
+           <Form
+             handleChange={this.handleChange}
+             handleSubmit={this.handleSubmit}
+             searchCity={this.state.searchCity}
+             searchCountry={this.state.SearchCountry}
+           />
+           <ul><WeatherResult /></ul>
+         </div>
+       </div>
+     </div>
+   )
+ }
+}
 export default App

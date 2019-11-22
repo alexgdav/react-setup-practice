@@ -1,0 +1,60 @@
+$accent-red: #d15154;
+$background-brown: #c86e30;
+$background-red: #d14549;
+$main-dark-grey: #2b3747;
+$text-color: #fff;
+
+li {
+  color: $text-color;
+}
+
+.aside {
+  background-image: url('https://i.imgur.com/EzP2d4G.png');
+  background-size: cover;
+  float: left;
+  height: 100%;
+  width: 35%;
+}
+
+.container-fluid {
+  align-items: center;
+  background: linear-gradient(to right, $background-brown, $background-red);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.formbody {
+  margin: 2em;
+  padding: 2em;
+}
+
+.forminput {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid $accent-red;
+  margin: .5em;
+}
+
+.get-button {
+  background-color: $accent-red;
+  border: 0;
+  color: $text-color;
+  font-family: Arial;
+  font-size: small;
+}
+
+.main {
+  align-items: center;
+  background: $main-dark-grey;
+  box-shadow: 5px 5px 5px $main-dark-grey;
+  display: inline-block;
+  height: 96%;
+  justify-content: center;
+  width: 98%;
+}
+
+
+.splitpane-right {
+  height: 100%;
+}
