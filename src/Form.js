@@ -1,17 +1,17 @@
 import React from 'react'
 
-const Form = ({ searchCity, searchCountry, handleSubmit, handleChange }) => (
+const Form = ({ searchParams, handleSubmit, handleChange }) => (
   <form className="formbody col-sm-12" onSubmit={handleSubmit}>
     <input className="forminput"
-      placeholder="city name"
-      value={searchCity}
-      name="cityname"
+      placeholder="city"
+      value={searchParams}
+      name="city"
       onChange={handleChange}
     />
     <input className="forminput"
       placeholder="country"
-      value={searchCountry}
-      name="countrycode"
+      value={searchParams}
+      name="country"
       onChange={handleChange}
     />
     <button className="get-button" type="submit">Get Weather</button>
