@@ -5,7 +5,7 @@ $background-red: #d14549;
 $main-dark-grey: #2b3747;
 $text-color: #fff;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
 
 hr {
   background-color: transparentize(rgba($accent-grey, 0.4), 0.2)
@@ -31,7 +31,7 @@ span {
   align-items: center;
   background: linear-gradient(to right, $background-brown, $background-red);
   display: flex;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Century Gothic', 'Questrial', sans-serif;
   height: 100vh;
   justify-content: center;
 }
@@ -42,14 +42,15 @@ span {
 }
 
 .forminput {
-  background: transparent;
+  background: transparent !important;
   border: 0;
   border-bottom: 1px solid transparentize(rgba($accent-red, 0.75), 0.2);
+  color: $text-color;
   margin: .5em;
 }
 
 .forminput:focus {
-  background: transparent;
+  background: transparent !important;
   outline: none;
 }
 
@@ -57,17 +58,19 @@ span {
   background-color: $accent-red;
   border: 0;
   color: $text-color;
-  font-size: small;
+  font-size: 12px;
+  height: 1.85rem;
+  padding: .5rem;
 }
 
 .main {
   align-items: center;
   background: $main-dark-grey;
-  box-shadow: 5px 5px 5px $main-dark-grey;
+  box-shadow: 10px 10px 10px transparentize(rgba($main-dark-grey, 0.9), 0.2);
   display: inline-block;
-  height: 96%;
+  height: 95%;
   justify-content: center;
-  width: 98%;
+  width: 99%;
 }
 
 
